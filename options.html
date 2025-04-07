@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Form Filler Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <h1>Your Information</h1>
+    <p>Enter your details below. This data will be stored locally in your browser.</p>
+
+    <div class="form-section">
+        <h2>Contact Information</h2>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName"><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone"><br>
+
+        <label for="linkedin">LinkedIn Profile URL:</label>
+        <input type="url" id="linkedin"><br>
+
+        <label for="portfolio">Portfolio/Website URL:</label>
+        <input type="url" id="portfolio"><br>
+
+        <label for="address">Address (Line 1):</label>
+        <input type="text" id="address"><br>
+
+         <label for="city">City:</label>
+        <input type="text" id="city"><br>
+
+         <label for="state">State/Province:</label>
+        <input type="text" id="state"><br>
+
+         <label for="zip">Zip/Postal Code:</label>
+        <input type="text" id="zip"><br>
+
+         <label for="country">Country:</label>
+        <input type="text" id="country"><br>
+    </div>
+
+    <div class="form-section">
+        <h2>Highest Education</h2>
+        <label for="educationLevel">Level (e.g., Bachelor's, Master's):</label>
+        <input type="text" id="educationLevel"><br>
+
+        <label for="school">School/University:</label>
+        <input type="text" id="school"><br>
+
+        <label for="major">Field of Study/Major:</label>
+        <input type="text" id="major"><br>
+
+        <label for="gradYear">Graduation Year:</label>
+        <input type="number" id="gradYear"><br>
+    </div>
+
+     <div class="form-section">
+        <h2>Most Recent Job</h2>
+         <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle"><br>
+
+        <label for="company">Company:</label>
+        <input type="text" id="company"><br>
+
+         <label for="jobStartDate">Start Date (YYYY-MM):</label>
+        <input type="text" id="jobStartDate" placeholder="YYYY-MM"><br>
+
+         <label for="jobEndDate">End Date (YYYY-MM or Present):</label>
+        <input type="text" id="jobEndDate" placeholder="YYYY-MM or Present"><br>
+    </div>
+
+
+    <button id="save">Save Information</button>
+    <div id="status"></div>
+
+    <script src="options.js"></script>
+</body>
+</html>

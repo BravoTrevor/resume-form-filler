@@ -1,31 +1,27 @@
 {
-    "manifest_version": 3,
-    "name": "Resume Form Filler MVP",
-    "version": "0.1.0",
-    "description": "Fills basic form fields based on user-provided data.",
-    "permissions": [
-      "storage",      // To save user data locally
-      "activeTab",    // To interact with the current page
-      "scripting"     // To inject the content script
-    ],
-    "host_permissions": [
-      "<all_urls>"    // Allows scripting injection on any page (needed for form filling)
-    ],
-    "options_page": "options.html",
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-      }
-    },
-    "background": {
-      "service_worker": "background.js"
-    },
-    "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+  "manifest_version": 3,
+  "name": "Simple Form Filler MVP",
+  "version": "0.1.0",
+  "description": "Fills basic fields (Name, Email, Phone) based on saved user data.",
+  "permissions": [
+    "storage",      
+    "activeTab",    
+    "scripting"     
+  ],
+  "background": {
+    "service_worker": "background.js" 
+  },
+  "action": {
+    "default_popup": "popup.html", 
+    "default_icon": {              
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
     }
+  },
+  "icons": { 
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
   }
+}

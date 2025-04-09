@@ -1,33 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Filler</title>
+    <title>Advanced Form Filler</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <h3>Enter Your Details:</h3>
-    <div>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName">
-    </div>
-    <div>
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName">
-    </div>
-    <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-    </div>
-    <div>
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
-    </div>
+    <h3>Your Profile Data:</h3>
 
-    <button id="save">Save Details</button>
-    <p id="status" class="status-message"></p>
+    <!-- Basic Info -->
+    <fieldset>
+        <legend>Basic Info</legend>
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+         <div>
+            <label for="residence">Location / Residence (e.g., City, Country):</label>
+            <input type="text" id="residence" name="residence">
+        </div>
+         <div>
+            <label for="summary">Short Summary / About Me:</label>
+            <textarea id="summary" name="summary" rows="4"></textarea>
+        </div>
+    </fieldset>
+
+    <!-- Work Experience -->
+    <fieldset>
+        <legend>Work Experience</legend>
+        <div id="workExperienceList">
+            <!-- Work entries will be added here by JS -->
+        </div>
+        <button type="button" id="addWorkExp">Add Work Experience</button>
+    </fieldset>
+
+    <!-- Education -->
+    <fieldset>
+        <legend>Education</legend>
+        <div id="educationList">
+            <!-- Education entries will be added here by JS -->
+        </div>
+        <button type="button" id="addEducation">Add Education</button>
+    </fieldset>
+
+     <!-- Skills -->
+    <fieldset>
+        <legend>Skills (Comma-separated)</legend>
+        <div>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="3" placeholder="e.g., JavaScript, Python, Project Management"></textarea>
+        </div>
+    </fieldset>
+
+     <!-- Links -->
+    <fieldset>
+        <legend>Links (e.g., Portfolio, LinkedIn, GitHub)</legend>
+         <div id="linksList">
+            <!-- Link entries will be added here by JS -->
+        </div>
+        <button type="button" id="addLink">Add Link</button>
+    </fieldset>
+
+     <!-- Certifications -->
+     <fieldset>
+        <legend>Certifications & Licenses</legend>
+         <div id="certsList">
+            <!-- Cert entries will be added here by JS -->
+        </div>
+        <button type="button" id="addCert">Add Certification/License</button>
+    </fieldset>
+
+     <!-- References (Use with caution - often requested later) -->
+     <fieldset>
+        <legend>References</legend>
+         <div id="referencesList">
+            <!-- Ref entries will be added here by JS -->
+        </div>
+        <button type="button" id="addReference">Add Reference</button>
+    </fieldset>
+
 
     <hr>
-
+    <button id="save">Save All Details</button>
+    <p id="status" class="status-message"></p>
+    <hr>
     <button id="fill">Fill Current Form</button>
 
     <script src="popup.js"></script>

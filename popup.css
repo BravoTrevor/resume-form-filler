@@ -57,3 +57,76 @@ hr {
     margin-top: 5px;
     min-height: 1em; /* Reserve space */
 }
+/* ... (previous styles remain) ... */
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0 5px;
+}
+
+textarea {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    vertical-align: top; /* Align with labels better */
+}
+
+/* Styles for dynamically added items */
+.list-item {
+    border: 1px dashed #eee;
+    padding: 8px;
+    margin-bottom: 8px;
+    position: relative; /* For positioning the remove button */
+}
+
+.list-item label {
+    font-size: 0.85em;
+    color: #555;
+}
+
+.list-item input[type="text"],
+.list-item input[type="month"], /* Added month type */
+.list-item textarea {
+    width: 90%; /* Slightly less width */
+    margin-bottom: 5px;
+}
+.list-item textarea {
+     height: 50px; /* Smaller text area */
+}
+
+.remove-item-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    padding: 0;
+}
+
+button[type="button"] { /* Style the "Add" buttons */
+    font-size: 0.9em;
+    padding: 5px 10px;
+    background-color: #e7e7e7;
+    color: black;
+    margin-top: 5px;
+}
+button[type="button"]:hover {
+     background-color: #dcdcdc;
+}

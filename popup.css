@@ -1,8 +1,29 @@
+/* Add or modify styles in popup.css as needed */
 body {
     font-family: sans-serif;
-    width: 250px; /* Adjust width as needed */
-    padding: 10px;
+    width: 350px; /* Increased width */
+    padding: 15px;
 }
+
+textarea {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9em; /* Make text area font slightly smaller */
+    margin-top: 3px;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+}
+
+/* Add other styles from previous version */
+/* ... (rest of the CSS) ... */
 
 div {
     margin-bottom: 10px;

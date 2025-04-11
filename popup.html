@@ -1,96 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Advanced Form Filler</title>
+    <title>Form Filler</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <h3>Your Profile Data:</h3>
-
-    <!-- Basic Info -->
-    <fieldset>
-        <legend>Basic Info</legend>
-        <div>
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName">
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
-         <div>
-            <label for="residence">Location / Residence (e.g., City, Country):</label>
-            <input type="text" id="residence" name="residence">
-        </div>
-         <div>
-            <label for="summary">Short Summary / About Me:</label>
-            <textarea id="summary" name="summary" rows="4"></textarea>
-        </div>
-    </fieldset>
-
-    <!-- Work Experience -->
-    <fieldset>
-        <legend>Work Experience</legend>
-        <div id="workExperienceList">
-            <!-- Work entries will be added here by JS -->
-        </div>
-        <button type="button" id="addWorkExp">Add Work Experience</button>
-    </fieldset>
-
-    <!-- Education -->
-    <fieldset>
-        <legend>Education</legend>
-        <div id="educationList">
-            <!-- Education entries will be added here by JS -->
-        </div>
-        <button type="button" id="addEducation">Add Education</button>
-    </fieldset>
-
-     <!-- Skills -->
-    <fieldset>
-        <legend>Skills (Comma-separated)</legend>
-        <div>
-            <label for="skills">Skills:</label>
-            <textarea id="skills" name="skills" rows="3" placeholder="e.g., JavaScript, Python, Project Management"></textarea>
-        </div>
-    </fieldset>
-
-     <!-- Links -->
-    <fieldset>
-        <legend>Links (e.g., Portfolio, LinkedIn, GitHub)</legend>
-         <div id="linksList">
-            <!-- Link entries will be added here by JS -->
-        </div>
-        <button type="button" id="addLink">Add Link</button>
-    </fieldset>
-
-     <!-- Certifications -->
-     <fieldset>
-        <legend>Certifications & Licenses</legend>
-         <div id="certsList">
-            <!-- Cert entries will be added here by JS -->
-        </div>
-        <button type="button" id="addCert">Add Certification/License</button>
-    </fieldset>
-
-     <!-- References (Use with caution - often requested later) -->
-     <fieldset>
-        <legend>References</legend>
-         <div id="referencesList">
-            <!-- Ref entries will be added here by JS -->
-        </div>
-        <button type="button" id="addReference">Add Reference</button>
-    </fieldset>
-
+    <h3>Core Details:</h3>
+    <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+    </div>
+    <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+    </div>
+     <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Optional, if different">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+    </div>
+    <div>
+        <label for="residence">Residence:</label>
+        <input type="text" id="residence" name="residence" placeholder="e.g., City, Country or Full Address">
+    </div>
+     <div>
+        <label for="links">Links (One URL per line):</label>
+        <textarea id="links" name="links" rows="3" placeholder="https://linkedin.com/in/...\nhttps://github.com/...\nhttps://portfolio..."></textarea>
+    </div>
 
     <hr>
+
+    <h3>Summary/Profile:</h3>
+     <div>
+        <label for="summary">Short Summary:</label>
+        <textarea id="summary" name="summary" rows="4" placeholder="Brief professional summary..."></textarea>
+    </div>
+
+    <hr>
+
+     <h3>Work Experience:</h3>
+     <div>
+        <label for="workExperience">Work Experience (One per line: Company | Role | Duration):</label>
+        <textarea id="workExperience" name="workExperience" rows="5" placeholder="Example Inc | Software Engineer | 2020-Present\nAnother Org | Developer | 2018-2020"></textarea>
+    </div>
+
+    <hr>
+
+     <h3>Education:</h3>
+      <div>
+        <label for="education">Education (One per line: Institution | Major/Degree | Duration):</label>
+        <textarea id="education" name="education" rows="4" placeholder="State University | B.S. Computer Science | 2014-2018\nTech College | Associate's Degree | 2012-2014"></textarea>
+    </div>
+
+    <hr>
+
+     <h3>Skills & Certifications:</h3>
+     <div>
+        <label for="skills">Skills (Comma-separated or one per line):</label>
+        <textarea id="skills" name="skills" rows="4" placeholder="JavaScript, Python, React, Node.js, SQL, Cloud Computing..."></textarea>
+    </div>
+     <div>
+        <label for="certifications">Certifications/Licenses (One per line):</label>
+        <textarea id="certifications" name="certifications" rows="3" placeholder="AWS Certified Developer\nProject Management Professional (PMP)"></textarea>
+    </div>
+
+    <hr>
+
+    <h3>References:</h3>
+     <div>
+        <label for="references">References (One per line - Name, Title, Contact Info):</label>
+        <textarea id="references" name="references" rows="3" placeholder="NOTE: Provide only if requested. Auto-filling sensitive.\nJane Doe, Manager, jane.doe@email.com"></textarea>
+    </div>
+
+    <hr>
+
     <button id="save">Save All Details</button>
     <p id="status" class="status-message"></p>
-    <hr>
+
     <button id="fill">Fill Current Form</button>
 
     <script src="popup.js"></script>

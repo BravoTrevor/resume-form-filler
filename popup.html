@@ -5,6 +5,31 @@
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
+    <!-- Add this new section at the top, just after the opening <body> tag -->
+    <fieldset>
+        <legend>Job Analysis</legend>
+        <div>
+            <label for="jobUrl">Job Listing URL:</label>
+            <input type="url" id="jobUrl" name="jobUrl" placeholder="https://www.linkedin.com/jobs/view/...">
+        </div>
+        <button type="button" id="analyzeJobBtn">Analyze Job</button>
+        <div id="analysisSpinner" class="spinner" style="display: none;"></div>
+        <div id="analysisResult" class="analysis-container">
+            <!-- Analysis results will be displayed here by JS -->
+        </div>
+    </fieldset>
+
+    <hr>
+    <!-- The rest of your existing popup.html for profile data follows -->
+    <h3>Your Profile Data:</h3>
+
+    <!-- Basic Info -->
+    <fieldset>
+        <legend>Basic Info</legend>
+        <!-- ... your existing fields for fullName, email, etc. ... -->
+    </fieldset>
+
+    <!-- ... the rest of your HTML ... -->
     <h3>Your Profile Data:</h3>
 
     <!-- Basic Info -->
@@ -54,7 +79,7 @@
     <fieldset>
         <legend>Skills (Comma-separated)</legend>
         <div>
-            <label for="skills">Skills:</label>
+            <!-- Label removed for brevity, assuming legend is enough -->
             <textarea id="skills" name="skills" rows="3" placeholder="e.g., JavaScript, Python, Project Management"></textarea>
         </div>
     </fieldset>

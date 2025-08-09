@@ -1,7 +1,14 @@
 body {
     font-family: sans-serif;
-    width: 250px; /* Adjust width as needed */
-    padding: 10px;
+    width: 380px; /* Adjusted width slightly for dynamic items */
+    padding: 15px;
+    font-size: 14px; /* Base font size */
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 div {
@@ -10,123 +17,179 @@ div {
 
 label {
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     font-size: 0.9em;
+    color: #555;
+    font-weight: 500;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="url"],
+input[type="month"],
+textarea {
     width: 95%;
-    padding: 5px;
+    padding: 6px 8px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+textarea {
+     vertical-align: top;
 }
 
 button {
     padding: 8px 15px;
     margin-top: 10px;
     cursor: pointer;
-    border: 1px solid #888;
+    border: 1px solid #aaa;
     border-radius: 4px;
     background-color: #f0f0f0;
+    font-size: 0.95em;
 }
 
 button:hover {
     background-color: #e0e0e0;
+    border-color: #888;
 }
 
 button#fill {
     background-color: #4CAF50; /* Green */
     color: white;
     border-color: #45a049;
+    font-weight: bold;
 }
 button#fill:hover {
     background-color: #45a049;
 }
 
 hr {
-    margin: 15px 0;
+    margin: 20px 0;
     border: 0;
     border-top: 1px solid #eee;
 }
 
 .status-message {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: green;
     margin-top: 5px;
-    min-height: 1em; /* Reserve space */
+    min-height: 1.2em; /* Reserve space */
+    font-weight: bold;
 }
-/* ... (previous styles remain) ... */
 
 fieldset {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 10px 15px;
     margin-bottom: 15px;
     border-radius: 4px;
 }
 
 legend {
     font-weight: bold;
-    font-size: 1em;
-    padding: 0 5px;
-}
-
-textarea {
-    width: 95%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    vertical-align: top; /* Align with labels better */
+    font-size: 1.05em;
+    padding: 0 8px;
+    color: #333;
 }
 
 /* Styles for dynamically added items */
 .list-item {
-    border: 1px dashed #eee;
-    padding: 8px;
-    margin-bottom: 8px;
+    border: 1px solid #e5e5e5;
+    background-color: #fdfdfd;
+    padding: 10px 12px 12px 12px; /* Added bottom padding */
+    margin-bottom: 10px;
+    border-radius: 3px;
     position: relative; /* For positioning the remove button */
 }
 
 .list-item label {
     font-size: 0.85em;
-    color: #555;
+    color: #666;
+    margin-bottom: 2px; /* Less space */
 }
 
 .list-item input[type="text"],
-.list-item input[type="month"], /* Added month type */
+.list-item input[type="url"],
+.list-item input[type="email"],
+.list-item input[type="tel"],
+.list-item input[type="month"],
 .list-item textarea {
-    width: 90%; /* Slightly less width */
-    margin-bottom: 5px;
+    width: calc(100% - 16px); /* Adjust width */
+    margin-bottom: 6px; /* Consistent spacing */
+    font-size: 0.9em; /* Slightly smaller font in list items */
 }
 .list-item textarea {
-     height: 50px; /* Smaller text area */
+     min-height: 40px; /* Smaller default textarea */
 }
 
 .remove-item-btn {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 8px;
+    right: 8px;
     background-color: #f44336; /* Red */
     color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 0.8em;
-    line-height: 1.2em;
+    font-size: 10px; /* Smaller font */
+    font-weight: bold;
+    line-height: 18px; /* Center 'X' */
     width: 18px;
     height: 18px;
     text-align: center;
     padding: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.remove-item-btn:hover {
+    background-color: #d32f2f; /* Darker red */
 }
 
-button[type="button"] { /* Style the "Add" buttons */
+button.add-button { /* Style the "Add" buttons consistently */
     font-size: 0.9em;
-    padding: 5px 10px;
+    padding: 6px 12px;
     background-color: #e7e7e7;
     color: black;
-    margin-top: 5px;
+    margin-top: 0px; /* Add button directly below list */
+    border: 1px solid #ccc;
 }
-button[type="button"]:hover {
+button.add-button:hover {
      background-color: #dcdcdc;
+}
+/* Add these styles to popup.css */
+.analysis-container {
+    margin-top: 15px;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+.analysis-container h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+}
+.analysis-container ul {
+    padding-left: 20px;
+    margin-top: 0;
+}
+.analysis-container p {
+    margin: 5px 0;
+}
+.spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    margin: 10px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
